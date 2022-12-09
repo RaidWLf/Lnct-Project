@@ -28,9 +28,14 @@ li:nth-child(1) {
   width: 50%;
   margin-top: -5%;
 }
-
 body {
   margin: 0;
+  padding: 0;
+  font-family: "roboto mono";
+}
+.container {
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: row;
   font-family: "roboto mono";
@@ -42,6 +47,8 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   width: 37%;
+  /* border: solid red;
+  height: 100vh; */
 }
 
 .main-right {
@@ -180,9 +187,52 @@ nav {
 }
 
 .bot-mid {
-  margin-top: -10%;
+  margin-top: -7%;
 }
 
-.social-logo {
+/* .social-logo {
   cursor: pointer;
+} */
+
+a {
+  text-decoration: none;
+  color: gray;
+}
+
+#blur.active {
+  filter: blur(20px);
+  pointer-events: none;
+  user-select: none;
+}
+
+.pop-up {
+  position: fixed;
+  top: 35%;
+  left: 50%;
+  padding: 50px;
+  visibility: hidden;
+  opacity: 0;
+  background: #fff;
+  transform: translate(-50%, -50%);
+  transition: 0.5s;
+  box-shadow: 10px 10px 25px -7px rgba(0, 0, 0, 0.68);
+  border-radius: 7px;
+}
+
+.pop-up p {
+  color: #372d2d;
+  font-size: 20px;
+}
+
+.pop-up h2 {
+  font-size: 30px;
+}
+
+#pop-1.active-insta,
+#pop-2.active-linkedin,
+#pop-3.active-gith {
+  top: 50%;
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
 }
